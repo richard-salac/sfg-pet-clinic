@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 /**
  *
- * @author Richard Salac <richard.salac@datera.cz>
+ * @author Richard Salac (richard.salac@datera.cz)
  */
 public class Pet {
     

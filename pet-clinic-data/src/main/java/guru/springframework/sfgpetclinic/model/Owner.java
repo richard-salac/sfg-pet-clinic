@@ -7,7 +7,7 @@ package guru.springframework.sfgpetclinic.model;
 
 /**
  *
- * @author Richard Salac <richard.salac@datera.cz>
+ * @author Richard Salac (richard.salac@datera.cz)
  */
 public class Owner extends Person {
     

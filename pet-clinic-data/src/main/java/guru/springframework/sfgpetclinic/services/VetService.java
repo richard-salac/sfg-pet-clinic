@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package guru.springframework.sfgpetclinic.model;
+package guru.springframework.sfgpetclinic.services;
+
+import guru.springframework.sfgpetclinic.model.Vet;
+import java.util.Set;
 
 /**
  *
  * @author Richard Salac (richard.salac@datera.cz)
  */
-public class PetType extends BaseEntity{
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+public interface VetService {
+    
+    Vet fingById(Long id);
+    
+    Vet save(Vet vet);
+    
+    Set<Vet> findAll();
 }

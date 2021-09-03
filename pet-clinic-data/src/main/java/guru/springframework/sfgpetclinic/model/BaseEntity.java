@@ -9,14 +9,8 @@ package guru.springframework.sfgpetclinic.model;
  *
  * @author Richard Salac (richard.salac@datera.cz)
  */
-public class PetType extends BaseEntity{
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+public class BaseEntity {
+    
+    private Long id;
+    
 }

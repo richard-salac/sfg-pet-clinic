@@ -3,25 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package guru.springframework.sfgpetclinic.model;
+package guru.springframework.sfgpetclinic.services;
 
-import java.io.Serializable;
+import java.util.Set;
 
 /**
  *
  * @author Richard Salac (richard.salac@datera.cz)
  */
-public class BaseEntity implements Serializable{
+public interface CrudService<T, ID> {
     
-    private Long id;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    Set<T> findAll();
     
+    T findById(ID id);
     
+    T save(T object);
+    
+    void delete(T object);
+    
+    void deleteById(ID id);
 }

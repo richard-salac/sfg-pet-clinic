@@ -12,15 +12,8 @@ import java.util.Set;
  *
  * @author Richard Salac (richard.salac@datera.cz)
  */
-public interface OwnerService {
+public interface OwnerService extends CrudService<Owner, Long> {
     
     Owner findByLastName(String lastName);
-    
-    Owner fingById(Long id);
-    
-    Owner save(Owner owner);
-    
-    Set<Owner> findAll();
-    
     
 }

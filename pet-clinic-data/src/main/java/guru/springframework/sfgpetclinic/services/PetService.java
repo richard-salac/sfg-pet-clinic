@@ -12,11 +12,6 @@ import java.util.Set;
  *
  * @author Richard Salac (richard.salac@datera.cz)
  */
-public interface PetService {
+public interface PetService extends CrudService<Pet, Long>{
    
-    Pet fingById(Long id);
-    
-    Pet save(Pet pet);
-    
-    Set<Pet> findAll(); 
 }

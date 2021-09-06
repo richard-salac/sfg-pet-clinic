@@ -12,11 +12,6 @@ import java.util.Set;
  *
  * @author Richard Salac (richard.salac@datera.cz)
  */
-public interface VetService {
-    
-    Vet fingById(Long id);
-    
-    Vet save(Vet vet);
-    
-    Set<Vet> findAll();
+public interface VetService extends CrudService<Vet, Long>{
+  
 }

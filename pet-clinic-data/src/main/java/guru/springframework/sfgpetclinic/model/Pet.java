@@ -11,7 +11,7 @@ import java.time.LocalDate;
  *
  * @author Richard Salac (richard.salac@datera.cz)
  */
-public class Pet {
+public class Pet extends BaseEntity{
     
     private PetType petType;
     private Owner owner;

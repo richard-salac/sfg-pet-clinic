@@ -7,7 +7,11 @@
         <version>0.0.9-SNAPSHOT</version>
     </parent>
     <artifactId>pet-clinic-data</artifactId>
-    <packaging>jar</packaging>
+
+    <properties>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,9 +48,6 @@
                         <goals>
                             <goal>repackage</goal>
                         </goals>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>

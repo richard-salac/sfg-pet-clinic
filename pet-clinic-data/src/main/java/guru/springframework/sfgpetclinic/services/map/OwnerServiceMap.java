@@ -13,6 +13,7 @@ import java.util.Set;
 
 import guru.springframework.sfgpetclinic.services.PetService;
 import guru.springframework.sfgpetclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
  * @author Richard Salac (richard.salac@datera.cz)
  */
 @Service
+@Profile({"default","map"})
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
@@ -45,7 +47,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
         Owner savedOwner = null;
 
-        if (object == null){
+        if (object != null){
             if (object.getPets() != null){
                 object.getPets().forEach(pet -> {
                     if (pet.getPetType() != null){
